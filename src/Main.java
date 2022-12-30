@@ -11,7 +11,7 @@ public class Main {
     }public static int Hanoi(int a) {
         int zahl = a;
         int[] array = new int[zahl];
-        for(int i = 0; i < zahl; i++) {
+        for(int i = 0; i < array.length; i++) {
             array[i] = i;
             System.out.println(array[i]);
         }
