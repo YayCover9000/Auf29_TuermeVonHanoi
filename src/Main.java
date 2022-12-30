@@ -13,9 +13,12 @@ public class Main {
         int[] array = new int[zahl];
         for(int i = 0; i < array.length; i++) {
             array[i] = i;
+            int[] arrayZwischen = new int[array.length];
+            arrayZwischen[i] = array(array.length - 1);
             System.out.println(array[i]);
+            System.out.println(arrayZwischen[i]);
+            int print = arrayZwischen[i];
         }
         return 0;
     }
-
 }
