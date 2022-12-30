@@ -11,13 +11,16 @@ public class Main {
     }public static int Hanoi(int a) {
         int zahl = a;
         int[] array = new int[zahl];
-        for(int i = 0; i < array.length; i++) {
+        int[] arrayZwischen = new int[zahl];
+        for(int i = 0; i <= array.length; i++) {
             array[i] = i;
-            int[] arrayZwischen = new int[array.length];
-            arrayZwischen[i] = array(array.length - 1);
             System.out.println(array[i]);
+        }
+        for (int i = 0; i <= array.length; i++) {
+            arrayZwischen[i] = array[i];
+            arrayZwischen[i] = Hanoi(array[zahl] - 1);
             System.out.println(arrayZwischen[i]);
-            int print = arrayZwischen[i];
+/*            int print = arrayZwischen[i];*/
         }
         return 0;
     }
