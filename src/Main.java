@@ -8,8 +8,8 @@ public class Main {
         int aufruf1 = Main.Hanoi(naechsteZahl);
         System.out.println(naechsteZahl);
 
-    }public static int Hanoi(int a) {
-        int zahl = a;
+    }public static int Hanoi(int naechsteZahl) {
+        int zahl = naechsteZahl;
         int[] array = new int[zahl];
         int[] arrayZwischen = new int[zahl];
         for(int i = 0; i < array.length; i++) {
