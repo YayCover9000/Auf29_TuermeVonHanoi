@@ -18,7 +18,7 @@ public class Main {
         }
         for (int i = 0; i < array.length; i++) {
             arrayZwischen[i] = array[i];
-            arrayZwischen[i] = Hanoi(array[zahl] - 1);
+            arrayZwischen[i] = Hanoi(array[zahl - 1]);
             System.out.println(arrayZwischen[i]);
 /*            int print = arrayZwischen[i];*/
         }
