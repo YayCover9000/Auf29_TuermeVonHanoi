@@ -5,10 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int naechsteZahl = sc.nextInt();
-        //int aufruf1 = Main.Hanoi(naechsteZahl);
+        int aufruf1 = Main.Hanoi(naechsteZahl);
         int n = 4; // Number of disks
         Main.towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
-        System.out.println(naechsteZahl);
+        System.out.println("Pos iens" + naechsteZahl);
 
     }public static int Hanoi(int naechsteZahl) {
         int zahl = naechsteZahl;
@@ -16,17 +16,17 @@ public class Main {
         int[] arrayZwischen = new int[zahl];
         for(int i = 0; i < array.length; i++) {
             array[i] = i;
-            System.out.println(array[i]);
+            System.out.println("pos zwei " + array[i]);
         }
         for (int i = 0; i < array.length; i++) {
-            arrayZwischen[i] = array[i];
-            arrayZwischen[i] = Hanoi(array[zahl - 1]);
-            System.out.println(arrayZwischen[i]);
+            arrayZwischen[i] = array[i] - 1;
+            arrayZwischen[i] = array[zahl - 1];
+            System.out.println(i + ":" + arrayZwischen[i]);
 /*            int print = arrayZwischen[i];*/
             for(int e : array)
                 System.out.println(e);
         }
-        return 0;
+        return arrayZwischen[1];
     }
     //public static int Hanoi2(int naechsteZahl, int n, char from_rod, char to_rod, char aux_rod){
         // Java recursive program to solve tower of hanoi puzzle
