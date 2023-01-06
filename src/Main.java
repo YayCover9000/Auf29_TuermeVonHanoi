@@ -7,25 +7,31 @@ public class Main {
         int naechsteZahl = sc.nextInt();
         int aufruf1 = Main.Hanoi(naechsteZahl);
         int n = 4; // Number of disks
-        Main.towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
+        // Main.towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
         System.out.println("Pos iens" + naechsteZahl);
 
     }public static int Hanoi(int naechsteZahl) {
         int zahl = naechsteZahl;
         int[] array = new int[zahl];
         int[] arrayZwischen = new int[zahl];
+        int laenge = arrayZwischen.length - 1;
         for(int i = 0; i < array.length; i++) {
             array[i] = i;
-            System.out.println("pos zwei " + array[i]);
+
+            for(int j = laenge; j > -1; j--) {
+
+/*                int[] x = new int [2];
+                x[y] = array[i -1];*/
+                arrayZwischen[j] = array[i];
+
+            }
+            laenge = laenge - 1;
+
         }
-        for (int i = 0; i < array.length; i++) {
-            arrayZwischen[i] = array[i] - 1;
-            arrayZwischen[i] = array[zahl - 1];
-            System.out.println(i + ":" + arrayZwischen[i]);
-/*            int print = arrayZwischen[i];*/
-            for(int e : array)
-                System.out.println(e);
-        }
+        for(int e : array)
+            System.out.println(e);
+        for(int e : arrayZwischen)
+            System.out.println(e);
         return arrayZwischen[1];
     }
     //public static int Hanoi2(int naechsteZahl, int n, char from_rod, char to_rod, char aux_rod){
